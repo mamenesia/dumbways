@@ -1,0 +1,40 @@
+mysql -u root -p
+
+
+CREATE DATABASE dumbways;
+USE dumbways;
+
+
+CREATE TABLE cities(
+  id INT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(100)
+  );
+
+CREATE TABLE biodata(
+  id INT AUTO_INCREMENT PRIMARY KEY, 
+  full_name VARCHAR(100), 
+  date_of_birth DATE, 
+  place_of_birth_id INT, 
+  phone_number VARCHAR(100), 
+  address TEXT, 
+  last_education ENUM('S2', 'S1', 'SMA', 'SMP', 'SD'), 
+  religion ENUM('Islam', 'Kristen', 'Katolik'), 
+  hobby SET('Renang', 'Mancing', 'Game', 'Gibah', 'Programming'), 
+  FOREIGN KEY (place_of_birth_id) REFERENCES cities(id)
+  );
+
+INSERT INTO cities(name) values('Jakarta');
+INSERT INTO cities(name) values('Bandung');
+INSERT INTO cities(name) values('Yogyakarta');
+
+INSERT INTO biodata(full_name, date_of_birth, place_of_birth_id, phone_number, address, last_education, religion, hobby) VALUES ('Lucinta Luna', '1992-07-12', 1, '081111', 'Jakarta', 'S1', 'Kristen', 'Renang,Game');
+
+INSERT INTO biodata(full_name, date_of_birth, place_of_birth_id, phone_number, address, last_education, religion, hobby) VALUES ('Satrio', '2001-07-21', 1, '082222', 'Jakarta', 'SMA', 'Islam', 'Gibah,Programming');
+
+INSERT INTO biodata(full_name, date_of_birth, place_of_birth_id, phone_number, address, last_education, religion, hobby) VALUES ('Syahrini', '1989-01-01', 2, '083333', 'Bandung', 'S1', 'Islam', 'Renang,Game,Gibah,Programming');
+
+INSERT INTO biodata(full_name, date_of_birth, place_of_birth_id, phone_number, address, last_education, religion, hobby) VALUES ('Dedy Prasetyo Hermawan', '1994-06-12', 3, '084444', 'Yogyakarta', 'S1', 'Islam', 'Renang,Programming');
+
+UPDATE biodata SET hobby = Null WHERE id = 3;
+
+DELETE FROM biodata WHERE id = 4;
