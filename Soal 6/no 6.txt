@@ -27,7 +27,7 @@ INSERT INTO cities(name) values('Jakarta');
 INSERT INTO cities(name) values('Bandung');
 INSERT INTO cities(name) values('Yogyakarta');
 
-INSERT INTO biodata(full_name, date_of_birth, place_of_birth_id, phone_number, address, last_education, religion, hobby) VALUES ('Lucinta Luna', '1992-07-12', 1, '081111', 'Jakarta', 'S1', 'Kristen', 'Renang,Game');
+  INSERT INTO biodata(full_name, date_of_birth, place_of_birth_id, phone_number, address, last_education, religion, hobby) VALUES ('Lucinta Luna', '1992-07-12', 1, '081111', 'Jakarta', 'S1', 'Kristen', 'Renang,Game');
 
 INSERT INTO biodata(full_name, date_of_birth, place_of_birth_id, phone_number, address, last_education, religion, hobby) VALUES ('Satrio', '2001-07-21', 1, '082222', 'Jakarta', 'SMA', 'Islam', 'Gibah,Programming');
 

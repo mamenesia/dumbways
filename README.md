@@ -9,3 +9,5 @@
   * [Penyelesaian Soal No. 5](https://github.com/mamenesia/dumbways/tree/master/Soal%205)
   * [Penyelesaian Soal No. 6](https://github.com/mamenesia/dumbways/tree/master/Soal%206)
   * [Penyelesaian Soal No. 7](https://github.com/mamenesia/dumbways/tree/master/Soal%207)
+
+### (PS: Please excuse my answer on task no 6 and 7, first time using MySQL and PHP)
